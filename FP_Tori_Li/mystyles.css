@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+
+}
+
+body {
+	font-family: 'ZCOOL XiaoWei', serif;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.name {
+	width:100%;
+	height:170vw;
+	text-align: center;
+	position: fixed;
+	top:30%;
+	z-index: 1;
+}
+
+h1{
+	font-size: 7vw;
+	font-weight: 700;
+}
+
+.redbox {
+	width:100px;
+	height:100px;
+	background-color: red;
+	margin:50px;
+	transition: all 1.5s linear;
+}
+
+.redbox:hover{
+	width:300px;
+	height:300px;
+	cursor: pointer;
+}
+
+.rotateme {
+	clip-path: polygon(44% 4%, 78% 15%, 78% 56%, 40% 42%, 30% 60%, 65% 70%);
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+	background-color:blue;
+	margin:100px 0 0 100px;
+	transition: all 4s ease;
+}
+
+.rotateme:hover {
+	transform: rotate(180deg) scale(2);
+}
+
+.blob {
+	width:100px;
+	height:100px;
+	margin: 0 auto 300px auto;
+	transition:all 3s linear;
+	z-index: 1;
+	
+}
+
+.blob:hover {
+	transform: rotate(-150deg);
+}
+
+/* PORK SECTION */
+
+.pork {
+	background-color:#C89FF5;
+	width: 100%;
+	margin: 700px 0 auto 0 ;
+	display:block;
+	position: relative;
+	z-index:5;
+	height: 2000px;
+}
+
+h2 {
+	font-size: 2vw;
+	color:#FFE625;
+	text-shadow: 1px 1px 3px purple;
+	margin-left:100px;
+	padding: 50px;
+	text-decoration: none;
+	
+}
+
+.foodone{
+	width: 40%;
+	margin-left: 20px;
+	display:inline-block;
+}
+
+.firstbox {
+	width:1000px;
+	height:600px;
+	background-color: #ffffff;
+	display:inline-block;
+	padding: 10px;
+	border: 10px dashed #8AFC82;
+	flex-direction:row-reverse;
+	margin-left: 50px;
+}
+
+.foodtwo {
+	width:50%;
+	display:inline-block;
+	margin-left: 550px; 
+	position: relative;
+	top: -300px;
+}
+.foodthree {
+	width:40%;
+	display:inline-block;
+	margin-left: 100px; 
+	top: 100px;
+}
+.foodfour {
+	width:30%;
+	display:inline-block;
+	margin-left: 800px; 
+}
+p {
+	font-size: 2vw;
+	color: blue;
+	padding:10px;
+}
+
+p:hover {
+	text-shadow: 2px 3px 12px pink;
+	cursor: url(images/heart.png), auto;
+}
+
+
+/*CHICKEN*/
+
+.chicken{
+	width:90%;
+	margin:0 auto;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index:6;
+}
+div {
+	width:50%;
+	margin:50px;
+}
+
+div img{
+	width:100%;
+}
+
+h3 {
+	font-size:2vw;
+	color:#FF932C;
+	font-weight: 300;
+	text-align:center;
+	margin:10px;
+	background-color: white;
+}
+h3:hover {
+	text-shadow: 2px 3px 12px pink;
+	cursor: url(images/heart.png), auto;
+}
+
+
+
+/*NOODLES*/
+.noodles {
+	background-image: url("images/13.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100vh;
+	width: 100%;
+	z-index: 5;
+	position: relative;
+}
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:20; }
+.hover_img a:hover span { display:block; }
+
+a {
+	font-size: 7vw;
+	color:blue;
+	text-shadow: 1px 1px  1px white;
+	font-family: 'ZCOOL XiaoWei', serif;
+	text-decoration: none;
+}
+
+
+/*SPACE*/
+.space{
+	margin: 100px;
+	
+}
+
+
+/*LAST*/
+.last{
+font-size: 20vw;
+font-weight: 700;
+color: #9230FF;
+}
+
+.circle{
+	width:300px;
+	height: 300px;
+	background-color: black;
+	border-radius: 50%;
+	margin:100px;
+	animation-name:change-color;
+	animation-duration: 4s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	}
+
+@keyframes change-color {
+	from {
+		background-color:black;
+	}
+	to  {
+		background-color: pink;
+		border-radius:20%;
+		
+	}
+}
+
+.movebox {
+	margin:50px 0 300px 0;
+	width:100px;
+	height:100px;
+	background-color: #73abff;
+	animation-name:move-color;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	position:relative;
+}
+
+@keyframes move-color {
+	0% {
+		top:0;
+		left:0;
+		background-color: yellow;
+	}
+	25% {
+		top:0;
+		left:200px;
+		border-radius: 50%;
+	}
+	50% {
+		top:200px;
+		left:200px;
+	}
+	75% {
+		top:200px;
+		left:0;
+		border-radius: 10%;
+	}
+	100%{
+		top:0;
+		left:0;
+		background-color: pink;
+		
+	}
+}
